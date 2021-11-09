@@ -548,7 +548,7 @@ span{
                                                         /*MY CONTACT*/
 .myContacts{
     margin-top: 97px;
-    width: 100vw;
+    width: 100%;
     background-image: url(../media/myContacts.png);
     height: 808px;
     background-repeat: no-repeat;

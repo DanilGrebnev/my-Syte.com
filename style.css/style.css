@@ -4,7 +4,12 @@ body{
     -khtml-user-select: none;
     user-select: none;
     overflow-x: hidden;
-
+}
+body .no-scroll {
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   overflow: hidden;
 }
 .container{
     margin: 0 auto;

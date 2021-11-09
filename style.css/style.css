@@ -652,13 +652,24 @@ textarea, input::placeholder{
 }
 
                     /*АДАПТАЦИЯ*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @media screen and (max-width: 1200px){
     .right__block{
         right: 0;
-        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+                transform: scale(0.7);
     }
     .content__left{
-        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
     }
     .keys__feedback{
         padding: 0 30px;
@@ -669,7 +680,9 @@ textarea, input::placeholder{
 }
 @media screen and (max-width: 992px){
     .content__left{
-        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
     }
 .calc-price{
     padding: 0 20px;
@@ -681,18 +694,29 @@ textarea, input::placeholder{
     height: 700px;
 }
 .hero .container{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 .right__block{
     display: none;
 }
 .content__left {
-        transform: scale(1);
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
     }
 .hero__content{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 .calc-price{
     padding: 0 20px;
@@ -720,8 +744,12 @@ textarea, input::placeholder{
     padding: 10px;
 }
 .menu__item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 }
@@ -730,11 +758,16 @@ textarea, input::placeholder{
         display: none;
     }
     .sidebar{
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         position: absolute;
         height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         right: 0;
+        -webkit-transition: .6s;
+        -o-transition: .6s;
         transition: .6s;
     }
     .toggle-btn{
@@ -742,30 +775,52 @@ textarea, input::placeholder{
         width: 35px;
         height: 35px;
         padding: 5px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         border-radius: 10px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         position: absolute;
         left: -45px;
         top: calc(50% - 35px/2);
     }
     .toggle-btn span{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction:column ;
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+            -ms-flex-direction:column ;
+                flex-direction:column ;
         height: 3px;
         width: 80%;
         border: 1px solid white;
         background: white;
     }
     .sidebar .menu-link {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         position: relative;
         width: 150px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         text-align: center;
         background: #344051;
         padding: 15px 0;
@@ -791,7 +846,9 @@ textarea, input::placeholder{
 }
 @media screen and (max-width: 600px){
     .left__title-content, .left__subtitle{
-        transform: scale(.75);
+        -webkit-transform: scale(.75);
+            -ms-transform: scale(.75);
+                transform: scale(.75);
     }
 }
 @media screen and (max-width: 480px){
@@ -800,15 +857,22 @@ textarea, input::placeholder{
         padding-top: 30px;
     }
     .content__left{
-        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
     }
     .mySkills{
         margin-top: 30px;
         height: auto;
     }
     .mySkills-wrapper{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-top: 30px;
         padding-bottom: 30px;
     }
@@ -820,8 +884,11 @@ textarea, input::placeholder{
         margin-bottom:80px;
     }
     .keys__feedback{
-        justify-content: center;
-        flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .keys .block__right{
         margin-top: 20px;
@@ -853,11 +920,26 @@ textarea, input::placeholder{
         padding: 0 20px;
     }
     .wrapper__input{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .wrapper__input input{
         width: 100%;
         padding-left: 11px;
+    }
+    .wrapper__input input::-webkit-input-placeholder{
+        padding-left: 0;
+    }
+    .wrapper__input input::-moz-placeholder{
+        padding-left: 0;
+    }
+    .wrapper__input input:-ms-input-placeholder{
+        padding-left: 0;
+    }
+    .wrapper__input input::-ms-input-placeholder{
+        padding-left: 0;
     }
     .wrapper__input input::placeholder{
         padding-left: 0;
@@ -874,14 +956,18 @@ textarea, input::placeholder{
         margin-right: 0;
     }
     .myContacts__wrapper{
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
     .wrapper__items .items__content{
         font-size: 14px;
     }
     .statistics__wrapper{
-        justify-content: center;
-        flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         margin-top: 30px;
         padding-bottom: 30px;
     }

@@ -1276,4 +1276,19 @@ textarea, input::placeholder{
         margin-bottom: 0;
         margin-left: 0;
     }
+    .aboutMe__button{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 360px){
+
+    .left-box .left__title-content .left__title{
+        font-size: 70px;
+    }
+    .left__btn-wrap{
+        transform: scale(0.8);
+    }
+    .aboutMe__button{
+        text-align: center;
+    }
 }

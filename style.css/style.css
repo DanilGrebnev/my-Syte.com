@@ -1,9 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
+
 
 body{
     font-family: 'Franklin Gothic Medium', arial;
@@ -12,17 +7,19 @@ body{
     -ms-user-select: none;
     user-select: none;
     box-sizing: border-box;
-    max-width:1920px;
-    width:100%;
+    max-width: 1920px;
+    width: 100%;
+
 
 
 }
 
-.color{
-    color:#fff;
+.padding-title{
+    padding-top: 104px;
 }
 /*HEADER*/
 .header{
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -50,6 +47,10 @@ body{
 .header__name{
     font-size: 23px;
 }
+.header__name a{
+    color: #fff;
+    text-transform: none;
+}
 .header__menu{
     max-width: 540px;
     width: 100%;
@@ -69,15 +70,14 @@ body{
 .sidebar{
     display: none;
 }
+.color{
+    color:#fff;
+}
+
 
 
 /*HERO*/
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
+
 
 .hero{
     position: relative;
@@ -112,6 +112,32 @@ body{
     -ms-flex-align: center;
     align-items: center;
 }
+.menu__item{
+    animation-name: text;
+    animation-duration: 1s;
+}
+@keyframes text {
+    0%{
+        transform: translateY(-150%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.left-box{
+    animation-name: move-right;
+    animation-duration: 3s;
+}
+@keyframes move-right {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
 .left__title-content{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -143,7 +169,6 @@ body{
     text-align: center;
 }
 .left__btn-wrap{
-
     max-width: 250px;
     width: 100%;
     display: -webkit-box;
@@ -184,16 +209,120 @@ body{
     width: 100%;
 }
 
-.mr-For-Title{
-    padding-top: 104px;
+/*Кастомные кнопки */
+
+
+a.animated-button.thar-four {
+    color: #6d7682;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: 2px solid #6d7682;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    0s;
 }
+a.animated-button.thar-four:hover {
+    color: white !important;
+    background-color: #6d7682;
+    text-shadow: nfour;
+}
+a.animated-button.thar-four:hover:before {
+    right: 0%;
+    left: auto;
+    width: 100%;
+}
+a.animated-button.thar-four:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #6d7682;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    0s;
+}
+
+.left__btn-wrap .btn{
+    align-items:  center;!important;
+    font-size: 19px;
+    height: auto;
+    padding: 13px;
+}
+
+@-webkit-keyframes swing {
+    15% {
+        -webkit-transform: translateX(9px);
+        transform: translateX(9px);
+    }
+    30% {
+        -webkit-transform: translateX(-9px);
+        transform: translateX(-9px);
+    }
+    40% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    50% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+    65% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes swing {
+    15% {
+        -webkit-transform: translateX(9px);
+        transform: translateX(9px);
+    }
+    30% {
+        -webkit-transform: translateX(-9px);
+        transform: translateX(-9px);
+    }
+    40% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    50% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+    65% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.swing:hover {
+    -webkit-animation: swing 0.6s ease;
+    animation: swing 0.6s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+
+
 
 /*ABOUT ME*/
 .aboutMe{
+    padding-top: 104px;
     width: 100%;
     height: 715px;
 }
-
 .title{
     text-transform: uppercase;
     display: -webkit-box;
@@ -209,7 +338,6 @@ body{
     font-size: 33px;
 
 }
-
 .line--orange{
     border-bottom:4px solid #d17700;
     width: 71px;
@@ -245,7 +373,7 @@ body{
     width: 100%;
 }
 .aboutMe__button{
-    margin: 35px auto;
+
     color: #6f707e;
     border: 2px solid #6f707e;
     display: -webkit-box;
@@ -259,10 +387,12 @@ body{
     align-items: center;
     max-width: 157px;
     width: 100%;
-    height: 34px;
+    margin: 35px auto;
     border-radius: 5px;
+    padding: 8px;
 }
-/*section KEYS*/
+
+                                        /*section KEYS*/
 .wrapper .btn{
     padding: 0;
 }           /* Настройка отступов кнопок навигации*/
@@ -274,7 +404,7 @@ body{
 }
 
 .keys{
-    margin-bottom: 188px;
+    /*margin-bottom: 188px;*/
 }
 .keys__text{
     text-align: center;
@@ -813,12 +943,7 @@ textarea, input::placeholder{
 
 
 /*АДАПТАЦИЯ*/
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
+
 
 @media screen and (max-width: 1200px){
     .right__block{

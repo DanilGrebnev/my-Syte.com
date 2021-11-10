@@ -14,9 +14,7 @@ body{
 
 }
 
-.padding-title{
-    padding-top: 104px;
-}
+
 /*HEADER*/
 .header{
 
@@ -939,7 +937,9 @@ textarea, input::placeholder{
     height: 350px;
 
 }
-
+.padding-title{
+    padding-top: 104px;
+}
 
 
 /*АДАПТАЦИЯ*/
